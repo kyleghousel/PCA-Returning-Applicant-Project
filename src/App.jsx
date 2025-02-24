@@ -1,12 +1,21 @@
-import { useState } from 'react'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css'
 import Landing from './components/landing'
+import Bio from './components/bio'
+import Portfolio from './components/portfolio'
+import Reading from './components/reading'
+import Music from './components/music'
+import Hiking from './components/hiking'
+import Cooking from './components/cooking'
 
 function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-indigo-300 to-blue-900 bg-cover font-mono m-0">
-      <Landing />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/bio" element={<Bio />} />
+      </Routes>
+    </Router>
   )
 }
 

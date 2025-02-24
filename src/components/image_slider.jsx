@@ -1,3 +1,4 @@
+{/* Utilized Monsterlessons Academy's video "Build React Image Slider From Scratch Tutorial" https://www.youtube.com/watch?v=SK9AlIbexOE&t=826s&pp=ygUUcmVhY3QgaW1hZ2UgY2Fyb3VzZWw%3D */}
 import { useState } from "react";
 
 const ImageSlider = ({ slides }) => {

@@ -1,4 +1,4 @@
-import { useState } from "react"
+import Navigation from "./navigation"
 import ImageSlider from "./image_slider"
 import kyleTon from "../assets/landing_slides/kyle_ton.png"
 import brothers from "../assets/landing_slides/brothers.jpg";
@@ -8,50 +8,6 @@ import meAndLinc from "../assets/landing_slides/me_and_linc.jpg";
 
 
 const Landing = () => {
-
-    const navItems = [{
-        id: 0,
-        name: 'Bio', 
-        path: './bio.jsx',
-    }, {
-        id: 1,
-        name: 'Portfolio', 
-        path: './portfolio.jsx',
-    }, {
-        id: 2,
-        name: 'Reading', 
-        path: './reading.jsx',
-    }, {
-        id: 3,
-        name: 'Music', 
-        path: './music.jsx',
-    }, {
-        id: 4, 
-        name: 'Hiking', 
-        path: './hiking.jsx',
-    }, {
-        id: 5,
-        name: 'Cooking',
-        path: './cooking.jsx',
-    }];
-
-    const handleMouseEnter = (itemName) => {
-        console.log(`Mouse entered: ${itemName}`);
-    };
-
-    const handleMouseLeave = (itemName) => {
-        console.log(`Mouse left: ${itemName}`);
-    };
-
-    const listItems = navItems.map(item => 
-    <li key={item.id}
-        onMouseEnter={() => handleMouseEnter(item.name)}
-        onMouseLeave={() => handleMouseLeave(item.name)}
-        className="p-4 cursor-pointer text-center transition-all duration-300 hover:bg-indigo-700 w-full h-full"
-    >
-        <a href={item.path}>{item.name}</a>
-    </li>
-);
 
     const slides = [
         {path: kyleTon, title: "Me and Welington"},
@@ -69,15 +25,9 @@ const Landing = () => {
     };
 
     return (
-        <div className="h-screen w-screen">
+        <div className="h-screen w-screen bg-gradient-to-b from-indigo-300 to-blue-900 bg-cover font-mono m-0">
             <header className="w-screen flex static justify-center text-5xl p-10">Kyle Housel</header>
-            <nav className="flex justify-around w-full">
-
-                <ul className="flex justify-around items-center h-full w-full bg-black text-white text-xl">
-                    {listItems}
-                </ul>
-
-            </nav>
+            <Navigation />
 
             <main className="flex flex-col justify-start items-center h-3/4">
                 
