@@ -1,15 +1,12 @@
 import { useState } from 'react'
 import './App.css'
 import Landing from './components/landing'
-{/*import Music from './components/music'*/}
 
 function App() {
-
-
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-b from-indigo-300 to-blue-900 bg-cover font-mono m-0">
       <Landing />
-    </>
+    </div>
   )
 }
 
