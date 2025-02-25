@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import Header from "./header";
+import Navigation from "./navigation"
 
 const Music = () => {
   const [albums, setAlbums] = useState(null);
@@ -63,6 +65,9 @@ const Music = () => {
           <p>{albums.name}</p>
           <img src={albums.images[0].url} alt={albums.name} />
           <p>{albums.tracks.items[0].name}</p>
+          <ol>
+            {albums.tracks}
+          </ol>
         </div>
       ) : (
         <p>Loading album data...</p>

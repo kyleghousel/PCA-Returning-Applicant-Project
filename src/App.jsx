@@ -14,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/bio" element={<Bio />} />
+        <Route path="/portfolio" element={<Portfolio />} />
       </Routes>
     </Router>
   )
