@@ -26,26 +26,26 @@ const Navigation = () => {
         path: '/cooking',
     }];
     
-    const handleMouseEnter = (itemName) => {
-        console.log(`Mouse entered: ${itemName}`);
-    };
+    // const handleMouseEnter = (itemName) => {
+    //     console.log(`Mouse entered: ${itemName}`);
+    // };
 
-    const handleMouseLeave = (itemName) => {
-        console.log(`Mouse left: ${itemName}`);
-    };
+    // const handleMouseLeave = (itemName) => {
+    //     console.log(`Mouse left: ${itemName}`);
+    // };
 
     const listItems = navItems.map(item => 
-    <li key={item.id}
-        onMouseEnter={() => handleMouseEnter(item.name)}
-        onMouseLeave={() => handleMouseLeave(item.name)}
-        className="p-4 cursor-pointer text-center transition-all duration-300 hover:bg-indigo-700 w-full h-full"
-    >
-        <a href={item.path}>{item.name}</a>
-    </li>
+    
+        <li key={item.id} className="w-full">
+            <a href={item.path} className="block p-4 cursor-pointer text-center transition-all duration-300 hover:bg-indigo-700 w-full h-full">
+                {item.name}
+            </a>
+        </li>
+
     );
     
     return (
-        <nav className="flex justify-around w-full">
+        <nav className="flex justify-around w-full static">
 
             <ul className="flex justify-around items-center h-full w-full bg-black text-white text-xl">
                 {listItems}

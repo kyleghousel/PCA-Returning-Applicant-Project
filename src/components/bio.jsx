@@ -90,7 +90,7 @@ const Bio = () => {
                                         access to PostgreSQL-Administrator (pgadmin) on Connect-Server. I immediately took to 
                                         completing a PostgreSQL course on udemy, and finished it within a couple of weeks. Learning
                                         Postgres immediately bore fruit as we began developing Broadcast Rooms and Audiences, which
-                                        were both data-intensive epics. Shortly after, with constant mentorship from my friend and 
+                                        were both data-intensive epics. Shortly after, with consistent guidance from my  
                                         teammate Welington, I continued to dabble in Swift. I built a couple more small, basic apps like 
                                         a Word Scramble game, but was focused more on exploring our own codebase and utilizing Xcode 
                                         from the mindset of being a more effective QA. With the basic understanding I developed of 
