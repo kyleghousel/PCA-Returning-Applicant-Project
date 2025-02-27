@@ -49,7 +49,7 @@ const Portfolio = () => {
 
             <Navigation />
 
-            <main className="flex flex-col h-auto items-center">
+            <main className="flex flex-col h-auto items-center overflow-y-scroll">
             
                 <div className="bg-white rounded-xl border-2 border-black m-2 p-7 h-1/2 w-3/4">
 

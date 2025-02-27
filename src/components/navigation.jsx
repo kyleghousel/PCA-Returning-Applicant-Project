@@ -45,7 +45,7 @@ const Navigation = () => {
     );
     
     return (
-        <nav className="flex justify-around w-full static">
+        <nav className="flex justify-around w-full sticky">
 
             <ul className="flex justify-around items-center h-full w-full bg-black text-white text-xl">
                 {listItems}
