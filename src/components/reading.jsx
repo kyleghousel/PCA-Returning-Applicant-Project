@@ -70,10 +70,6 @@ const Reading = () => {
             <img src={book.path} className="w-20 h-auto cursor-pointer" onClick={() => {setTitle(book.title); setContent(book.review);}}></img>
         </li>
     );
-
-    
-    
-
     
 
     return (

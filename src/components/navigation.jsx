@@ -26,14 +26,6 @@ const Navigation = () => {
         path: '/cooking',
     }];
     
-    // const handleMouseEnter = (itemName) => {
-    //     console.log(`Mouse entered: ${itemName}`);
-    // };
-
-    // const handleMouseLeave = (itemName) => {
-    //     console.log(`Mouse left: ${itemName}`);
-    // };
-
     const listItems = navItems.map(item => 
     
         <li key={item.id} className="w-full">
@@ -45,7 +37,7 @@ const Navigation = () => {
     );
     
     return (
-        <nav className="flex justify-around w-full sticky">
+        <nav className="flex justify-around w-full sticky top-0">
 
             <ul className="flex justify-around items-center h-full w-full bg-black text-white text-xl">
                 {listItems}
