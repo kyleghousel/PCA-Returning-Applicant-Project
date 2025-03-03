@@ -90,7 +90,7 @@ const Reading = () => {
                         </ul>
                     </div>
 
-                    <div className="flex flex-col w-1/3 bg-white border-black border-2 rounded-lg">
+                    <div className="flex flex-col self-center h-1/3 w-1/3 bg-white border-black border-2 rounded-lg">
                         <h3 className="text-xl font-bold">{title}</h3>
                         <p className="text-left p-3">{content}</p>
                     </div>

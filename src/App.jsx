@@ -6,7 +6,6 @@ import Portfolio from './components/portfolio'
 import Reading from './components/reading'
 import Music from './components/music'
 import Hiking from './components/hiking'
-import Cooking from './components/cooking'
 
 function App() {
   return (
@@ -18,7 +17,6 @@ function App() {
         <Route path="/reading" element={<Reading />} />
         <Route path="/music" element={<Music />} />
         <Route path="/hiking" element={<Hiking />} />
-        <Route path="/cooking" element={<Cooking />} />
       </Routes>
     </Router>
   )

@@ -2,76 +2,71 @@ import React, { useState, useEffect } from "react";
 import Header from "./header";
 import Navigation from "./navigation"
 
+//My goal for this page will be to practice / "demonstrate" grid because I'm too comfortable with flexbox
+
 const Music = () => {
-  const [albums, setAlbums] = useState(null);
-  const client_id = '6405c464b5184e759cad38a60090f081';
-  const client_secret = '950491866b544dea91afe946cd3770cb';
-
-  const getSpotifyToken = async () => {
-    const authOptions = {
-      method: 'POST',
-      headers: {
-        'Authorization': 'Basic ' + btoa(client_id + ':' + client_secret),
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
-      body: new URLSearchParams({
-        grant_type: 'client_credentials',
-      }),
-    };
-
-    try {
-      const response = await fetch('https://accounts.spotify.com/api/token', authOptions);
-      const data = await response.json();
-
-      if (response.ok) {
-        const token = data.access_token;
-        console.log("Access token: ", token);
-        return token; // Return the token to use later in fetchAmir
-      } else {
-        console.error("Error fetching token:", data);
-      }
-    } catch (error) {
-      console.error("Error fetching token:", error);
-    }
-  };
-
-  // This effect runs on component mount
-  useEffect(() => {
-    const fetchAmir = async () => {
-      const token = await getSpotifyToken(); // Get the token first
-
-      if (token) {
-        const response = await fetch("https://api.spotify.com/v1/albums/5RL52Y9Q7wmjcYvibTczjJ", {
-          headers: {
-            'Authorization': `Bearer ${token}`, // Include the access token
-          },
-        });
-
-        const data = await response.json();
-        console.log(data);
-        setAlbums(data); // Store the album data in state
-      }
-    };
-
-    fetchAmir(); // Call the function when the component mounts
-    console.log(albums);
-  }, []); // Empty dependency array ensures this runs only once after the initial render
+  
+const logClick = (e) => {
+    console.log(e.target)
+}
 
   return (
-    <div>
-      <h2>Favorite Albums</h2>
-      {albums ? (
-        <div>
-          <p>{albums.name}</p>
-          <img src={albums.images[0].url} alt={albums.name} />
-          <p>{albums.tracks.items[0].name}</p>
-          <ol>
-            {albums.tracks}
-          </ol>
-        </div>
-      ) : (
-        <p>Loading album data...</p>
-      )}
+    <div className="min-h-screen w-screen bg-gradient-to-b from-indigo-300 to-blue-900 bg-cover font-mono m-0">
+
+        <Header />
+
+        <Navigation />
+
+        <main className="flex flex-col h-auto items-center overflow-y-scroll">
+        
+            <div className="grid grid-cols-1 bg-white rounded-xl border-2 border-black m-2 p-7 h-1/2 w-3/4">
+
+                <h1 className="text-center pb-5 text-2xl font-bold tracking-wide" onClick={logClick}>Music</h1>
+                
+                <div className="grid grid-cols-2 gap-5">
+                    
+                    <div className="">
+                        <ul className="grid grid-cols-1 w-full gap-5">
+                            <li><iframe className="rounded-xl w-full h-96" src="https://open.spotify.com/embed/album/5RL52Y9Q7wmjcYvibTczjJ?utm_source=generator&theme=0" loading="lazy"></iframe></li>
+                            <li><iframe className="rounded-xl w-full h-96" src="https://open.spotify.com/embed/album/1U0Z7QjSzlg3gMeUOuUldz?utm_source=generator" loading="lazy"></iframe></li>
+                            <li><iframe className="rounded-xl w-full h-96" src="https://open.spotify.com/embed/album/6qKsVbDuX5sKB4OTqkNc0C?utm_source=generator" loading="lazy"></iframe></li>
+                        </ul>
+                    </div>
+
+                    <div className="grid justify-center items-start gap-5">
+                        <div className="h-96">
+                            <h3 className="text-xl pb-3 font-bold">Top Tracks</h3>
+                            <ul className="list-disc text-left leading-10">
+                                <li>Habibi</li>
+                                <li>Indigo Nights</li>
+                                <li>Tummy</li>
+                            </ul>
+                        </div>
+
+                        <div className="h-96">
+                            <h3 className="text-xl pb-3 font-bold">Top Tracks</h3>
+                            <ul className="list-disc text-left leading-10">
+                                <li>Sandpaper</li>
+                                <li>Lucky Enough</li>
+                                <li>Mechanical Bull</li>
+                            </ul>
+                        </div>
+
+                        <div className="h-96">
+                            <h3 className="text-xl pb-3 font-bold">Top Tracks</h3>
+                            <ul className="list-disc text-left leading-10">
+                                <li>Sofa King</li>
+                                <li>Kool Aid</li>
+                                <li>Going Kokomo</li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+
+            </div>
+        </main>
     </div>
   );
 };

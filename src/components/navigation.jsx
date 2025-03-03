@@ -20,11 +20,8 @@ const Navigation = () => {
         id: 4, 
         name: 'Hiking', 
         path: '/hiking',
-    }, {
-        id: 5,
-        name: 'Cooking',
-        path: '/cooking',
-    }];
+    }, 
+];
     
     const listItems = navItems.map(item => 
     
