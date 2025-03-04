@@ -18,8 +18,8 @@ const Navigation = () => {
         path: '/music',
     }, {
         id: 4, 
-        name: 'Hiking', 
-        path: '/hiking',
+        name: 'Learning', 
+        path: '/learning',
     }, 
 ];
     
@@ -34,7 +34,7 @@ const Navigation = () => {
     );
     
     return (
-        <nav className="flex justify-around w-full sticky top-0">
+        <nav className="flex justify-around w-full sticky z-10 top-0">
 
             <ul className="flex justify-around items-center h-full w-full bg-black text-white text-xl">
                 {listItems}

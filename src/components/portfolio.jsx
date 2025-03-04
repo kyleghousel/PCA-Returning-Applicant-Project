@@ -10,16 +10,24 @@ import CSSimg from "../assets/lang_logos/CSS_logo.png";
 
 const Portfolio = () => {
     const [repos, setRepos] = useState([]);
-    //Come back and add load state and error handling!!
+    const [loading, setLoading] = useState(true);
+    
     useEffect(() => {
         fetch("https://api.github.com/users/kyleghousel/repos")
             .then((response) => response.json())
             .then((data) => {
                 const filterRepos = data.filter(repo => !repo.archived);
                 setRepos(filterRepos);
-                console.log(filterRepos);
+                setLoading(false);
+            })
+            .catch(error => {
+                console.error("Unable to fetch repos:", error);
+                setLoading(false);
+                setRepos([error])
             });
     }, []);
+
+
 
     const langIcons = {
         JavaScript: JSimg,
@@ -49,15 +57,22 @@ const Portfolio = () => {
 
             <Navigation />
 
-            <main className="flex flex-col h-auto items-center overflow-y-scroll">
+            <main className="flex flex-col h-full items-center overflow-y-scroll">
             
-                <div className="bg-white rounded-xl border-2 border-black m-2 p-7 h-1/2 w-3/4">
+                <div className="bg-white rounded-xl border-2 border-black m-2 p-7 h-150 w-3/4">
 
-                    <h1 className="text-center pb-5 text-2xl font-bold tracking-wide">Portfolio</h1>
+                    {loading ? (
+                        <p className="animate-pulse text-xl font-bold">Fetching respositories...</p>
+                    ) : (
+                    <>
+                        <h1 className="text-center pb-5 text-2xl font-bold tracking-wide">Portfolio</h1>
 
-                    <ul className="w-full">
-                        {listRepos}
-                    </ul>
+                        <ul className="w-full h-7/8 overflow-y-auto">
+                            {listRepos}
+                        </ul>
+                    </>
+                
+                    )}
 
                 </div>
             </main>

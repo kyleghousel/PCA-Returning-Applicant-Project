@@ -13,7 +13,7 @@ import Will from "../assets/books/will_of_the_many.png";
 
 const Reading = () => {
     const [title, setTitle] = useState()
-    const [content, setContent] = useState("Click a book to checkout a quick review!");
+    const [content, setContent] = useState("Click on a book to checkout a quick review!");
 
     const books = [{
         id: 0,
@@ -79,7 +79,7 @@ const Reading = () => {
 
             <main className="flex flex-col text-center h-screen w-full p-7">
                 
-                <h1 className="w-full text-2xl font-bold pb-5">Some of my favorite reads...</h1>
+                <h1 className="w-full text-lg font-bold pb-8">In early fatherhood, reading is one of the few leisure hobbies I can maintain.</h1>
 
                 <div className="flex flex-row h-full">
                     

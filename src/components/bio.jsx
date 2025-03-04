@@ -49,7 +49,8 @@ const Bio = () => {
                     <div className="p-5 w-full">
                         <div className="h-96 flex">
                             <div className="flex flex-col w-1/2 p-5">   
-                                <h3 className="text-lg font-bold pb-3">Personal</h3>
+                                <h3 className="text-lg font-bold">Personal</h3>
+                                <hr className="b-0 mb-3"></hr>
                                 <p className="overflow-y-auto">
                                     This past year has been busy for me, to say the least. 
                                     Around the time of the last round of PCA interviews, 
@@ -82,7 +83,8 @@ const Bio = () => {
                                 <img src={Ton} alt="Welington mentoring" className="h-full"></img>
                             </div>
                             <div className="flex flex-col w-1/2 p-5">
-                                <h3 className="text-lg font-bold pb-3">Professional</h3>
+                                <h3 className="text-lg font-bold">Professional</h3>
+                                <hr className="b-0 mb-3"></hr>
                                     <p className="overflow-y-auto">
                                         After my last PCA candidacy bid, I started by pouring myself into being a better
                                         QA Ninja. I started to apply concepts and procedures from my ISTQB certification

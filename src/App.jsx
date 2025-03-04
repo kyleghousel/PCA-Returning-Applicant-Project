@@ -5,7 +5,7 @@ import Bio from './components/bio'
 import Portfolio from './components/portfolio'
 import Reading from './components/reading'
 import Music from './components/music'
-import Hiking from './components/hiking'
+import Learning from './components/learning'
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/reading" element={<Reading />} />
         <Route path="/music" element={<Music />} />
-        <Route path="/hiking" element={<Hiking />} />
+        <Route path="/learning" element={<Learning />} />
       </Routes>
     </Router>
   )

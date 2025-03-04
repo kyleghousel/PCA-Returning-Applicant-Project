@@ -5,10 +5,6 @@ import Navigation from "./navigation"
 //My goal for this page will be to practice / "demonstrate" grid because I'm too comfortable with flexbox
 
 const Music = () => {
-  
-const logClick = (e) => {
-    console.log(e.target)
-}
 
   return (
     <div className="min-h-screen w-screen bg-gradient-to-b from-indigo-300 to-blue-900 bg-cover font-mono m-0">
@@ -21,7 +17,7 @@ const logClick = (e) => {
         
             <div className="grid grid-cols-1 bg-white rounded-xl border-2 border-black m-2 p-7 h-1/2 w-3/4">
 
-                <h1 className="text-center pb-5 text-2xl font-bold tracking-wide" onClick={logClick}>Music</h1>
+                <h1 className="text-center pb-5 text-2xl font-bold tracking-wide" >Music I'm Loving Right Now</h1>
                 
                 <div className="grid grid-cols-2 gap-5">
                     
