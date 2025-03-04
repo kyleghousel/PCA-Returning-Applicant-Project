@@ -40,7 +40,7 @@ const Portfolio = () => {
 
     const listRepos = repos.map(repo =>
         <li key={repo.id} className="flex justify-start w-full pt-2 pb-2">
-            <a href={repo.html_url} className="pb-4 cursor-pointer w-1/4 h-full font-bold">
+            <a href={repo.html_url} className="pb-4 pr-2 cursor-pointer w-1/4 h-full font-bold truncate">
                 {repo.name}
             </a>
 
@@ -57,17 +57,17 @@ const Portfolio = () => {
 
             <Navigation />
 
-            <main className="flex flex-col h-full items-center overflow-y-scroll">
+            <main className="flex flex-col h-full items-center overflow-y-scroll p-5">
             
-                <div className="bg-white rounded-xl border-2 border-black m-2 p-7 h-150 w-3/4">
+                <div className="bg-white rounded-xl border-2 border-black m-2 p-7 h-185 w-3/4">
 
                     {loading ? (
                         <p className="animate-pulse text-xl font-bold">Fetching respositories...</p>
                     ) : (
                     <>
-                        <h1 className="text-center pb-5 text-2xl font-bold tracking-wide">Portfolio</h1>
+                        <h1 className="text-center pb-5 text-xl md:text-2xl font-bold tracking-wide">Portfolio</h1>
 
-                        <ul className="w-full h-7/8 overflow-y-auto">
+                        <ul className="w-full h-7/8 text-xs md:text-base p-3 md:p-0 overflow-y-auto">
                             {listRepos}
                         </ul>
                     </>

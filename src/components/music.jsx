@@ -19,17 +19,17 @@ const Music = () => {
 
                 <h1 className="text-center pb-5 text-2xl font-bold tracking-wide" >Music I'm Loving Right Now</h1>
                 
-                <div className="grid grid-cols-2 gap-5">
+                <div className="grid grid-cols-2 gap-5 w-full">
                     
-                    <div className="">
+                    <div>
                         <ul className="grid grid-cols-1 w-full gap-5">
-                            <li><iframe className="rounded-xl w-full h-96" src="https://open.spotify.com/embed/album/5RL52Y9Q7wmjcYvibTczjJ?utm_source=generator&theme=0" loading="lazy"></iframe></li>
-                            <li><iframe className="rounded-xl w-full h-96" src="https://open.spotify.com/embed/album/1U0Z7QjSzlg3gMeUOuUldz?utm_source=generator" loading="lazy"></iframe></li>
-                            <li><iframe className="rounded-xl w-full h-96" src="https://open.spotify.com/embed/album/6qKsVbDuX5sKB4OTqkNc0C?utm_source=generator" loading="lazy"></iframe></li>
+                            <li><iframe className="rounded-xl w-auto md:w-full h-96" src="https://open.spotify.com/embed/album/5RL52Y9Q7wmjcYvibTczjJ?utm_source=generator&theme=0" loading="lazy"></iframe></li>
+                            <li><iframe className="rounded-xl w-auto md:w-full h-96" src="https://open.spotify.com/embed/album/1U0Z7QjSzlg3gMeUOuUldz?utm_source=generator" loading="lazy"></iframe></li>
+                            <li><iframe className="rounded-xl w-auto md:w-full h-96" src="https://open.spotify.com/embed/album/6qKsVbDuX5sKB4OTqkNc0C?utm_source=generator" loading="lazy"></iframe></li>
                         </ul>
                     </div>
 
-                    <div className="grid justify-center items-start gap-5">
+                    <div className="hidden md:grid justify-center items-start gap-5">
                         <div className="h-96">
                             <h3 className="text-xl pb-3 font-bold">Top Tracks</h3>
                             <ul className="list-disc text-left leading-10">

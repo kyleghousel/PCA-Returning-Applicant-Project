@@ -47,8 +47,8 @@ const Bio = () => {
                 <div className="bg-white rounded-xl border-2 border-black m-2 h-auto w-3/4">
                     <h1 className="text-center p-5 text-2xl font-bold tracking-wide">The Last Year</h1>
                     <div className="p-5 w-full">
-                        <div className="h-96 flex">
-                            <div className="flex flex-col w-1/2 p-5">   
+                        <div className="h-1/2 sm:h-96 flex flex-col sm:flex-row">
+                            <div className="flex flex-col w-full sm:w-1/2 p-5">   
                                 <h3 className="text-lg font-bold">Personal</h3>
                                 <hr className="b-0 mb-3"></hr>
                                 <p className="overflow-y-auto">
@@ -58,37 +58,40 @@ const Bio = () => {
                                     we received our first ultrasound, and were given a due date of 
                                     September 27th. Our house is a 1930 twin, and is quite the fixer-upper. 
                                     I took it upon myself to completely gut our second bedroom down to 
-                                    the studs and renovate it into a nursery. The plaster had cracks, 
-                                    the wiring was Knob and Tube, I didn't feel great about it. 
-                                    Through the process I learned: basic wiring, framing for drywall, 
+                                    the studs and renovate it into a nursery. The plaster had cracks and 
+                                    the wiring was Knob and Tube, so I didn't feel great about it. 
+                                    Through this rehab process I got to learn: basic wiring, framing for drywall, 
                                     hardwood floor restoration, ceiling fan and light installation, 
                                     attic insulation, and how Kait would look at me if her due date
-                                    were three weeks away and I still wasn't done the nursery project.
+                                    was three weeks away and I still wasn't done the nursery project.
                                     <br></br>
-                                    Lincoln was born on September 27, 2024, and after some assistance from
-                                    the NICU was brought home a couple of days later. Now, he is a happy and healthy
+                                    Lincoln was born on September 27, 2024, and after a couple of days later with some
+                                    assistance from the NICU, was brought home. Now, he is a happy and healthy
                                     5-month old who is looking more like his mom every day. When he was a newborn
                                     and looked like a little raisin, everyone said he looked like me. Now that he's a 
                                     cute baby, everyone says he looks more like his mom - what's that about? Through this process
-                                    he has learned how to: roll, sleep for five hour stretches, babble, fake cough, 
-                                    track, recognize faces and voices, and is taking swimming lessons! 
+                                    <em> he</em> has learned how to: roll, sleep for five hour stretches, babble, fake cough, 
+                                    track with his eyes, recognize faces and voices, and is taking swimming lessons! 
                                 </p>
                             </div>
-                            <div className="w-1/2 p-5">
+                            <div className="h-60 sm:h-auto w-full sm:w-1/2 p-5">
                                 <ImageSlider slides={slides}/>
                             </div>
                         </div>
-                        <div className="h-96 flex pt-5">
-                            <div className="flex w-1/2 justify-center p-5">   
+                        <div className="h-1/2 sm:h-96 flex flex-col-reverse sm:flex-row pt-5">
+                            <div className="flex w-full sm:w-1/2 justify-center p-5">   
                                 <img src={Ton} alt="Welington mentoring" className="h-full"></img>
                             </div>
-                            <div className="flex flex-col w-1/2 p-5">
-                                <h3 className="text-lg font-bold">Professional</h3>
+                            <div className="flex flex-col w-full sm:w-1/2 p-5">
+                                <h3 className="text-base sm:text-lg font-bold">Professional</h3>
                                 <hr className="b-0 mb-3"></hr>
-                                    <p className="overflow-y-auto">
-                                        After my last PCA candidacy bid, I started by pouring myself into being a better
-                                        QA Ninja. I started to apply concepts and procedures from my ISTQB certification
-                                        into our Quality and Testing processes. It was around this time that we were provided
+                                    <p className="text-sm sm:text-base overflow-y-auto">
+                                        After my last PCA candidacy bid, I started by pouring myself into becoming a better
+                                        QA Ninja. I didn't just want to be a strong tester, I wanted to take ownership of both
+                                        the quality of our product, and our testing processes and procedures. I started to apply concepts learned
+                                        from my ISTQB certification into these processes. I wanted us to be smarter about testing - When should 
+                                        we perform a regression test? What should it cover? What should our documentation look like? How can we 
+                                        get better about reporting and addressing crash behaviors? It was around this time that we were provided
                                         access to PostgreSQL-Administrator (pgadmin) on Connect-Server. I immediately took to 
                                         completing a PostgreSQL course on udemy, and finished it within a couple of weeks. Learning
                                         Postgres immediately bore fruit as we began developing Broadcast Rooms and Audiences, which

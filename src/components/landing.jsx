@@ -1,3 +1,4 @@
+import Header from "./header"
 import Navigation from "./navigation"
 import ImageSlider from "./image_slider"
 import kyleTon from "../assets/landing_slides/kyle_ton.png"
@@ -25,17 +26,23 @@ const Landing = () => {
     };
 
     return (
-        <div className="h-screen w-screen bg-gradient-to-b from-indigo-300 to-blue-900 bg-cover font-mono m-0">
-            <header className="w-screen flex static justify-center text-5xl p-10">Kyle Housel</header>
+        <div className="min-h-screen w-screen bg-gradient-to-b from-indigo-300 to-blue-900 bg-cover font-mono m-0">
+            <Header />
             <Navigation />
 
-            <main className="flex flex-col justify-start items-center h-3/4">
+            <main className="flex flex-col justify-start items-center h-auto w-full p-10">
                 
-                
-                <div className="h-full w-1/2 p-12">
+                <div className="bg-white rounded-sm text-lg border-black border-1 p-4 m-4 w-auto">
+                    <h1 className="text-center">
+                        Hi gang, nice to see you again. I missed us. Please enjoy my project!
+                    </h1>
+                </div>
+
+                <div className="h-170 w-full lg:w-1/2 p-7">
                     <ImageSlider slides={slides}/>
                 </div>
             </main>
+
 
         </div>
     )

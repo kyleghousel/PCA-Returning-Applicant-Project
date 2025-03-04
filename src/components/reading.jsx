@@ -19,22 +19,22 @@ const Reading = () => {
         id: 0,
         title: "East of Eden",
         path: Eden,
-        review: "This is the book that made me fall in love with reading as an adult. Cain and Abel retold. It's beautiful."
+        review: "This is the book that made me fall in love with reading as an adult. I didn't know much about it when I picked it up, outside of knowing he wrote 'Of Mice and Men.' This is Cain and Abel retold, and it's beautiful."
     }, {
         id: 1,
         title: "The Last Argument of Kings",
         path: AOK,
-        review: "As good as the fantasy genre gets, in my opinion. No one writes characters like Joe Abercrombie, and I love good characters."
+        review: "As good as the fantasy genre gets, in my opinion. No one writes characters like Joe Abercrombie, and I love good characters. This is the third book in a trilogy, which is based on the idea - what if we re-did Lord of the Rings but Gandalf was an asshole?"
     }, {
         id: 2,
         title: "Man's Search for Meaning",
         path: Meaning,
-        review: "Both a real account by a psychologist who survived Auschwitz, and his psychological theories that followed."
+        review: "Both a real account by a psychologist who survived Auschwitz, and his psychological theories that followed. This book shows you just how much mindset matters, and that finding meaning in what you do is important."
     }, {
         id: 3,
         title: "The Molecule of More",
         path: More,
-        review: "Enjoyable to read and teaches you about how dopamine fuels your drive, addictions, and self-control."
+        review: "Enjoyable to read and teaches you about how dopamine fuels your drive, addictions, and self-control. A rare fun to read nonfiction."
     }, {
         id: 4,
         title: "Sea of Tranquility",
@@ -77,9 +77,11 @@ const Reading = () => {
             <Header />
             <Navigation />
 
-            <main className="flex flex-col text-center h-screen w-full p-7">
+            <main className="flex flex-col text-center h-screen w-full p-5">
                 
-                <h1 className="w-full text-lg font-bold pb-8">In early fatherhood, reading is one of the few leisure hobbies I can maintain.</h1>
+                <h1 className="self-center text-basic font-bold bg-white rounded-sm border-black border-1 pt-4 pb-4 m-4 w-3/5">In early fatherhood, reading is one of the few leisure hobbies I can maintain.
+                    <br></br>Below are some of my faves ↓
+                </h1>
 
                 <div className="flex flex-row h-full">
                     
@@ -90,8 +92,8 @@ const Reading = () => {
                         </ul>
                     </div>
 
-                    <div className="flex flex-col self-center h-1/3 w-1/3 bg-white border-black border-2 rounded-lg">
-                        <h3 className="text-xl font-bold">{title}</h3>
+                    <div className="flex flex-col self-center h-auto md:h-1/2 w-1/3 text-sm md:text-base bg-white border-black border-2 rounded-lg">
+                        <h3 className="text-md sm: text-lg md:text-xl font-bold break-words">{title}</h3>
                         <p className="text-left p-3">{content}</p>
                     </div>
 
