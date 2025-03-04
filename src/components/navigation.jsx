@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom';
-
 const Navigation = () => {
     
     const navItems = [{
@@ -28,9 +26,9 @@ const Navigation = () => {
     const listItems = navItems.map(item => 
     
         <li key={item.id} className="w-full">
-            <Link to={item.path} className="block p-4 cursor-pointer text-center transition-all duration-300 hover:bg-indigo-700 w-full h-full">
+            <a to={item.path} className="block p-4 cursor-pointer text-center transition-all duration-300 hover:bg-indigo-700 w-full h-full">
                 {item.name}
-            </Link>
+            </a>
         </li>
 
     );
