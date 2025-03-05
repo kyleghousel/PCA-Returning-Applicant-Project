@@ -2,6 +2,13 @@
 My goal for this project is to create a showcase of who I am and what I've done over the past year by writing out a depiction of
 the previous year in my Bio section, as well as show what I've done with my hobbies and interests since the last round of PCA interviews.
 
+# Run Instructions (Node.js is required)
+1. `git clone https://github.com/kyleghousel/PCA-Returning-Applicant-Project.git`
+2. `cd (project folder)`
+3. `npm install`
+4. `npm run dev -- --open`
+
+
 ## Tier 1 Targets: Project Components
 - The project will be developed with Vite, utilizing React.js and Tailwind CSS
 - Included will be sections about my hobbies of reading and learning, as well as music I currently love (as well as photos of my son throughout)
