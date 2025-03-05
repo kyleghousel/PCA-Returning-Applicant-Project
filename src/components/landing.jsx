@@ -36,7 +36,7 @@ const Landing = () => {
                 
                 <div className="bg-white rounded-sm text-lg border-black border-1 p-4 m-4 w-auto">
                     <h1 className="text-center">
-                        Hi gang, nice to see you again. I missed us. Please enjoy my project!
+                        Hi gang, nice to see you again. I missed us. I hope you enjoy my project!
                     </h1>
                 </div>
 
