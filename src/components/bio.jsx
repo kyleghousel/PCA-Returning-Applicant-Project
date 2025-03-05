@@ -54,16 +54,18 @@ const Bio = () => {
                                 <p className="overflow-y-auto">
                                     This past year has been busy for me, to say the least. 
                                     Around the time of the last round of PCA interviews, 
-                                    we confirmed my wife Kait had established a healthy pregnancy,
+                                    we got the good news that my wife Kait was pregnant, 
                                     we received our first ultrasound, and were given a due date of 
                                     September 27th. Our house is a 1930 twin, and is quite the fixer-upper. 
-                                    I took it upon myself to completely gut our second bedroom down to 
+                                    I took it upon myself to then completely gut our second bedroom down to 
                                     the studs and renovate it into a nursery. The plaster had cracks and 
-                                    the wiring was Knob and Tube, so I didn't feel great about it. 
-                                    Through this rehab process I got to learn: basic wiring, framing for drywall, 
+                                    the wiring was Knob and Tube, so I didn't feel great about putting 
+                                    the baby in that room. I wanted it to feel as fresh and welcoming as possible for him.
+                                    Through this rehab process, I got to learn basic wiring, framing for drywall, 
                                     hardwood floor restoration, ceiling fan and light installation, 
-                                    attic insulation, and how Kait would look at me if her due date
+                                    attic insulation, and by September I learned how Kait would look at me if her due date
                                     was three weeks away and I still wasn't done the nursery project.
+                                    <br></br>
                                     <br></br>
                                     Lincoln was born on September 27, 2024, and after a couple of days later with some
                                     assistance from the NICU, was brought home. Now, he is a happy and healthy

@@ -1,7 +1,7 @@
-import Header from "./header"
-import Navigation from "./navigation"
-import ImageSlider from "./image_slider"
-import kyleTon from "../assets/landing_slides/kyle_ton.png"
+import Header from "./header";
+import Navigation from "./navigation";
+import ImageSlider from "./image_slider";
+import kyleTon from "../assets/landing_slides/kyle_ton.png";
 import brothers from "../assets/landing_slides/brothers.jpg";
 import elope from "../assets/landing_slides/elope.jpg";
 import aStarIsBorn from "../assets/landing_slides/a_star_is_born.jpeg";
@@ -25,6 +25,8 @@ const Landing = () => {
 
     };
 
+   
+
     return (
         <div className="min-h-screen w-screen bg-gradient-to-b from-indigo-300 to-blue-900 bg-cover font-mono m-0">
             <Header />
@@ -41,6 +43,7 @@ const Landing = () => {
                 <div className="h-170 w-full lg:w-1/2 p-7">
                     <ImageSlider slides={slides}/>
                 </div>
+
             </main>
 
 

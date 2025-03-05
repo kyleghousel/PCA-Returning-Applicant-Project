@@ -13,46 +13,55 @@ import Will from "../assets/books/will_of_the_many.png";
 
 const Reading = () => {
     const [title, setTitle] = useState()
+    const [author, setAuthor] = useState()
     const [content, setContent] = useState("Click on a book to checkout a quick review!");
 
     const books = [{
         id: 0,
         title: "East of Eden",
+        author: "John Steinbeck",
         path: Eden,
         review: "This is the book that made me fall in love with reading as an adult. I didn't know much about it when I picked it up, outside of knowing he wrote 'Of Mice and Men.' This is Cain and Abel retold, and it's beautiful."
     }, {
         id: 1,
         title: "The Last Argument of Kings",
+        author: "Joe Abercrombie",
         path: AOK,
         review: "As good as the fantasy genre gets, in my opinion. No one writes characters like Joe Abercrombie, and I love good characters. This is the third book in a trilogy, which is based on the idea - what if we re-did Lord of the Rings but Gandalf was an asshole?"
     }, {
         id: 2,
         title: "Man's Search for Meaning",
+        author: "Viktor Frankl",
         path: Meaning,
-        review: "Both a real account by a psychologist who survived Auschwitz, and his psychological theories that followed. This book shows you just how much mindset matters, and that finding meaning in what you do is important."
+        review: "Both a real account of a psychologist who survived Auschwitz, and his psychological theories that followed. This book shows you just how much mindset matters, and that finding meaning in what you do is important."
     }, {
         id: 3,
         title: "The Molecule of More",
+        author: "Lieberman & Long",
         path: More,
         review: "Enjoyable to read and teaches you about how dopamine fuels your drive, addictions, and self-control. A rare fun to read nonfiction."
     }, {
         id: 4,
         title: "Sea of Tranquility",
+        author: "Emily St. John Mandel",
         path: Tranq,
         review: "Quick-hitting SciFi that poses big questions and captures the feelings of isolation and time passing by during the COVID lockdown using time travel and four different interwoven plot threads."
     }, {
         id: 5,
         title: "The Secret History",
+        author: "Donna Tartt",
         path: SecretHist,
-        review: "This book is all vibes, and invented the Dark Academia genre. A murder, weird goth kids at a rural college in Vermont? Hell yeah."
+        review: "This book is all vibes, and invented the Dark Academia genre. A murder? Weird goth kids at a rural college in Vermont? Hell yeah."
     }, {
         id: 6,
         title: "Slaughterhouse Five",
+        author: "Kurt Vonnegut",
         path: SlaughtFive,
         review: "I think this is Vonnegut's masterpiece. A man with PTSD from his involvement in the firebombing of Dresden trips through time. This book asks 'Does anything really matter?' It's a dark comedy."
     }, {
         id: 7,
         title: "The Will of the Many",
+        author: "James Islington",
         path: Will,
         review: "Fantasy Anicent Rome with a great magic system, world-building that sucks you in, with flawed yet compelling characters. A bunch of story-telling tropes in one story, but all flawlessly executed."
     }
@@ -61,13 +70,13 @@ const Reading = () => {
 
     const listBooksOne = books.slice(0,4).map(book => 
         <li key={book.id} className="w-full">
-            <img src={book.path} className="w-20 h-auto cursor-pointer" onClick={() => {setTitle(book.title); setContent(book.review);}}></img>
+            <img src={book.path} className="w-20 h-auto cursor-pointer" onClick={() => {setTitle(book.title); setAuthor(book.author); setContent(book.review);}}></img>
         </li>
     );
 
     const listBooksTwo = books.slice(4,8).map(book => 
         <li key={book.id} className="w-full">
-            <img src={book.path} className="w-20 h-auto cursor-pointer" onClick={() => {setTitle(book.title); setContent(book.review);}}></img>
+            <img src={book.path} className="w-20 h-auto cursor-pointer" onClick={() => {setTitle(book.title); setAuthor(book.author); setContent(book.review);}}></img>
         </li>
     );
     
@@ -79,7 +88,7 @@ const Reading = () => {
 
             <main className="flex flex-col text-center h-screen w-full p-5">
                 
-                <h1 className="self-center text-basic font-bold bg-white rounded-sm border-black border-1 pt-4 pb-4 m-4 w-3/5">In early fatherhood, reading is one of the few leisure hobbies I can maintain.
+                <h1 className="self-center text-basic font-bold bg-white rounded-lg border-black border-2 pt-4 pb-4 m-4 w-3/5">In early fatherhood, reading is one of the few leisure hobbies I can keep up with.
                     <br></br>Below are some of my faves ↓
                 </h1>
 
@@ -94,6 +103,7 @@ const Reading = () => {
 
                     <div className="flex flex-col self-center h-auto md:h-1/2 w-1/3 text-sm md:text-base bg-white border-black border-2 rounded-lg">
                         <h3 className="text-md sm: text-lg md:text-xl font-bold break-words">{title}</h3>
+                        <h4 className="text-md sm: text-base md:text-lg font-bold break-words">by {author}</h4>
                         <p className="text-left p-3">{content}</p>
                     </div>
 

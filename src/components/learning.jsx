@@ -19,9 +19,9 @@ const Learning = () => {
                
                 <p className="pb-5 w-full text-justify">Is it too on the nose to say I love to learn, and that it is also a hobby?
                     
-                    I don't know how else to group this stuff. It's how I enjoy spending most of my time.
+                    I don't know....it's how I enjoy spending most of my time.
                     
-                    Some things I have learned about this past year:
+                    Some things I have enjoyed learning about this past year:
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 
