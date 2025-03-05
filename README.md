@@ -4,7 +4,7 @@ the previous year in my Bio section, as well as show what I've done with my hobb
 
 # Run Instructions (Node.js is required)
 1. `git clone https://github.com/kyleghousel/PCA-Returning-Applicant-Project.git`
-2. `cd (project folder)`
+2. `cd PCA-Returning-Applicant-Project.git`
 3. `npm install`
 4. `npm run dev -- --open`
 
