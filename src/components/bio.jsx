@@ -39,7 +39,7 @@ const Bio = () => {
     ]
     
     return (
-        <div className="h-full w-screen bg-gradient-to-b from-indigo-300 to-blue-900 bg-cover font-mono m-0">
+        <div className="min-h-screen w-screen bg-gradient-to-b from-indigo-300 to-blue-900 bg-cover font-mono m-0">
             <Header />
             <Navigation />
 
